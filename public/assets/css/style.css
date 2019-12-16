@@ -1,0 +1,32 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #f1ebe3;
+  list-style-type: none;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+.change-eaten {
+  margin-left: 10px;
+  background: none;
+  color: #fff;
+  border: 2px solid #727272;
+  background-color: #727272;
