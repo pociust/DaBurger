@@ -28,9 +28,7 @@ $(function() {
       name: $("#ca")
         .val()
         .trim(),
-      eaten: $("[name=eaten]:checked")
-        .val()
-        .trim()
+      eaten: 0
     };
 
     // Send the POST request.
@@ -38,16 +36,16 @@ $(function() {
       type: "POST",
       data: newBurger
     }).then(function() {
-      console.log("created new cat");
+      console.log("created new burger");
       // Reload the page to get the updated list
       location.reload();
     });
   });
 
-  $(".js-delete").on("click", function(event) {
-    const id = $(this).data("id");
-    $.ajax("/api/burgers/" + id, { type: "DELETE" }).then(() => {
-      location.reload();
-    });
-  });
+  // $(".js-delete").on("click", function(event) {
+  //   const id = $(this).data("id");
+  //   $.ajax("/api/burgers/" + id, { type: "DELETE" }).then(() => {
+  //     location.reload();
+  //   });
+  // });
 });
