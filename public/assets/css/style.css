@@ -38,59 +38,86 @@ li {
 }
 
 ul.eaten li {
-  animation: slide-in 0.7s;
+  opacity: 0;
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
 }
 
 ul.eaten li:nth-child(7n),
 ul.eaten li:nth-child(7n + 1) {
+  min-height: 50px;
   background: #aa874e;
 }
 
 ul.eaten li:nth-child(7n + 1) {
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 ul.eaten li:nth-child(7n) {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-}
-
-ul.eaten li:nth-child(7n) {
   margin-top: 30px;
+  animation-delay: 1.2s;
 }
 
 ul.eaten li:nth-child(7n-5) {
   background-color: #7c5f41;
   border-bottom: 10px solid #5c442d;
+  min-height: 45px;
+
+  animation-delay: 0.2s;
 }
 
 ul.eaten li:nth-child(7n-4) {
   background-color: #e9eb80;
   border-bottom: 5px solid #cfb65b;
+  animation-delay: 0.4s;
 }
 
 ul.eaten li:nth-child(7n-3) {
   background-color: #b95381;
   border-bottom: 4px solid #804c63;
+  animation-delay: 0.6s;
 }
 
 ul.eaten li:nth-child(7n-2) {
   background-color: #f07777;
   border-bottom: 5px solid #974749;
+  animation-delay: 0.8s;
 }
 
 ul.eaten li:nth-child(7n-1) {
   background-color: #80d041;
   border-bottom: 3px solid #537554;
+  animation-delay: 1s;
 }
 
 @keyframes slide-in {
   0% {
-    transform: translateY(0%);
+    transform: translateY(-150px);
     opacity: 0;
   }
+  80% {
+    transform: translateY(0) rotate(3deg);
+    opacity: 1;
+  }
+  85% {
+    transform: translateY(-3px) rotate(-3deg);
+  }
+  90% {
+    transform: translateY(0px) rotate(2deg);
+  }
+  95% {
+    transform: translateY(-2px) rotate(-1);
+  }
   100% {
-    transform: translateY(100%);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
